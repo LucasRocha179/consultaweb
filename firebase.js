@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAf1VOaAl-8Xk0FCsJMMD9XqtqYAMtBU0g",
