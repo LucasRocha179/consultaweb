@@ -11,9 +11,11 @@ const firebaseConfig = {
   measurementId: "G-XVE2G5K972"
 };
 let fireDb;
+let analytics;
   // Initialize Firebase
   if (!firebase.apps.length) {
     fireDb = firebase.initializeApp(firebaseConfig);
+    analytics = getAnalytics(fireDb);
  }else {
     fireDb = firebase.app(); // if already initialized, use that one
  }
