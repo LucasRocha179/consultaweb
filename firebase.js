@@ -16,7 +16,7 @@ let analytics;
   // Initialize Firebase
   if (!firebase.apps.length) {
     fireDb = firebase.initializeApp(firebaseConfig);
-    analytics = getAnalytics(initializeApp(firebaseConfig)b);
+    analytics = getAnalytics(initializeApp(firebaseConfig));
  }else {
     fireDb = firebase.app(); // if already initialized, use that one
  }
