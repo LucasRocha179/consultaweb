@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAf1VOaAl-8Xk0FCsJMMD9XqtqYAMtBU0g",
@@ -12,11 +11,10 @@ const firebaseConfig = {
   measurementId: "G-XVE2G5K972"
 };
 let fireDb;
-let analytics;
+
   // Initialize Firebase
   if (!firebase.apps.length) {
     fireDb = firebase.initializeApp(firebaseConfig);
-    analytics = getAnalytics(initializeApp(firebaseConfig));
  }else {
     fireDb = firebase.app(); // if already initialized, use that one
  }
