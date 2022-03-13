@@ -16,7 +16,9 @@ let fireDb;
   // Initialize Firebase
   if (!firebase.apps.length) {
     fireDb = firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    if( typeof window !== "undefined" ){
+      firebase.analytics();
+    }
  }else {
     fireDb = firebase.app(); // if already initialized, use that one
  }
